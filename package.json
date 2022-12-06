@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/WebAhead-cs2/modernt_twitter/issues"
   },
-  "homepage": "https://github.com/WebAhead-cs2/modernt_twitter#readme"
+  "homepage": "https://github.com/WebAhead-cs2/modernt_twitter#readme",
+  "dependencies": {
+    "pg": "^8.8.0"
+  }
 }
