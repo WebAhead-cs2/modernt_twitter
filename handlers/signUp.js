@@ -1,18 +1,21 @@
 const bcrypt = require("bcryptjs");
 const getBody = require("../getBody");
 const model = require("../database/db");
+require("css/signUp.css");
 
 function get(request, response) {
   response.writeHead(200, { "content-type": "text/html" });
   response.end(`
-    <h1>Create an account</h1>
-    <form action="sign-up" method="POST">
+    <h1 id="create">Create an account</h1>
+    <div id="main" >
+    <form action="sign-up" method="POST" id="signup">
       <label for="email">Email</label>
       <input type="email" id="email" name="email">
       <label for="password">Password</label>
       <input type="password" id="password" name="password">
-      <button>Sign up</button>
+      <button id ="button">Sign up</button>
     </form>
+    </div>
   `);
 }
 

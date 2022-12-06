@@ -5,7 +5,8 @@ const model = require("../database/db");
 function get(request, response) {
   response.writeHead(200, { "content-type": "text/html" });
   response.end(`
-    <h1>Log in</h1>
+    <h1 id="log">Log in</h1>
+    <div id="main" >
     <form action="log-in" method="POST">
       <label for="email">Email</label>
       <input type="email" id="email" name="email">
@@ -13,6 +14,7 @@ function get(request, response) {
       <input type="password" id="password" name="password">
       <button>Log in</button>
     </form>
+    </div>
   `);
 }
 
