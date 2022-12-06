@@ -1,7 +1,6 @@
 const bcrypt = require("bcryptjs");
 const getBody = require("../getBody");
 const model = require("../database/db");
-require("css/signUp.css");
 
 function get(request, response) {
   response.writeHead(200, { "content-type": "text/html" });
