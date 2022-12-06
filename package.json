@@ -1,0 +1,21 @@
+{
+  "name": "modernt_twitter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "getBody.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebAhead-cs2/modernt_twitter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WebAhead-cs2/modernt_twitter/issues"
+  },
+  "homepage": "https://github.com/WebAhead-cs2/modernt_twitter#readme"
+}
