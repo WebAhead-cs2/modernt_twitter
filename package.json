@@ -1,0 +1,27 @@
+{
+  "name": "modernt_twitter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "getBody.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebAhead-cs2/modernt_twitter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WebAhead-cs2/modernt_twitter/issues"
+  },
+  "homepage": "https://github.com/WebAhead-cs2/modernt_twitter#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.18.2"
+  }
+}
