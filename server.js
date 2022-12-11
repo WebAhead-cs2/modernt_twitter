@@ -44,29 +44,43 @@ server.get("/new-post", (req, res) => {
 });
 
 server.get("/posts", (req, res) => {
-    const html = postHandler.allPosts(thePosts);
-    res.send(html);
+    const html = postHandler.allPosts(req,res);
+    //res.send(html);
 });
 
 server.post("/new-post", (req, res) => {
     const newPost = req.body;
     const email = req.cookies.email;
     newPost.author = email;
-    thePosts.push(newPost);
-    res.redirect("/posts");
+    //thePosts.push(newPost);
+    const content = newPost.content;
+    console.log(content);
+    postHandler.addPost(req, res,email, content).then(html => res.send(html)).catch(error => {
+        res.send(home.layout(/*html */ `
+              <h1>${error} </h1> 
+            `));
+    });
+    //res.redirect("/posts");
 });
 
-server.get("/posts/:title", (req, res) => {
-    console.log(req.params.title);
-    console.log(thePosts);
+server.get("/posts/:content", (req, res) => {
+    //console.log(req.params.title);
+   // console.log(thePosts);
+
     const post = thePosts.find((p) => p.title === req.params.title);
     const html = postHandler.post(post);
     res.send(html);
 });
 
-server.get("/delete-post/:title", (req, res) => {
-    thePosts = thePosts.filter((p) => p.title !== req.params.title);
-    res.redirect("/posts");
+server.get("/delete-post/:id", (req, res) => {
+    //thePosts = thePosts.filter((p) => p.title !== req.params.title);
+    const blog_id= req.params.id;
+    postHandler.deletePost(blog_id).then(html => res.send(html)).catch(error => {
+        res.send(home.layout(/*html */ `
+              <h1>${error} </h1> 
+            `));
+    });
+   // res.redirect("/posts");
 });
 
 

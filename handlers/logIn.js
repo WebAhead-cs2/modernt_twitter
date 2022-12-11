@@ -9,14 +9,25 @@ const { type } = require("express/lib/response");
 function get(request, response) {
   //response.writeHead(200, { "content-type": "text/html" });
   return (home.layout(/*html */ `
-    <h1>Log in</h1>
+  <p class="sign">Dont have a account ?<span> <a href="sign-up">sign up!</a></span></p>
+  <h1 class ="title">Fiqra</h1>
+  <p class="con">Login to continue </p>
+  <div class="container">
     <form action="log-in" method="POST">
       <label for="email">Email</label>
-      <input id="author" type="email" name="email" required>
+      <input class="input" id="author" placeholder="Enter Email" type="email" name="email" required>
       <label for="password">Password</label>
-      <input type="password" id="password" name="password">
+      <input class="input"  type="password"  placeholder="Enter Password" id="password" name="password">
       <button type="submit">Log in</button>
     </form>
+    </div>
+
+
+
+
+
+
+
   `));
 }
 

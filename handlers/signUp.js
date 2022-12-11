@@ -6,18 +6,26 @@ const postHandler = require("./postHandler");
 
 function get(request, response) {
   return home.layout(/*html */ `
-    <h1>Create an account</h1>
+  <h1 class ="title">Fiqra</h1>
+  <p class="register">Register your account </p>
+  <p class="register">Fill the details bellow to submit register account. </p>
+  <div class="container">
     <form action="sign-up" method="POST">
       <label for="email">Email</label>
-      <input type="email" id="email" name="email">
+      <input class="input" type="email" placeholder="Enter Email" id="email" name="email">
       <label for="username">Username</label>
       <input id="username" name="username">
       <label for="password">Password</label>
-      <input type="password" id="password" name="password">
+      <input class="input" type="password" id="password" placeholder="Enter Password" name="password">
       <label for="age">Age</label>
       <input id="age" name="age" type="number">
+      <p class="policy">By signing in, you’re agreed to our Terms & Condition and Privacy Policy.* </p>
       <button>Sign up</button>
     </form>
+    <p class="login">Already have account?<a href="log-in">sign in!</a> </p>
+    </div>
+  
+
   `);
 }
 
@@ -26,8 +34,7 @@ function post(request, response) {
 
     const email = request.body.email;
     const password = request.body.password;
-    const age = request.body.age;
-    const location = request.body.location;
+   // const age = request.body.age;
     bcrypt
       .genSalt(10)
       .then(salt => bcrypt.hash(password, salt))

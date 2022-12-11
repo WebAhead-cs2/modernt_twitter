@@ -2,14 +2,18 @@ const db = require("../database/connection");
 //const postHandler = require("./postHandler");
 
 function layout(content) {
-  return /*html*/ `
+  return `
     <!DOCTYPE html>
     <html lang="en">
       <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>learning</title>
-        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="css/home.css">
+        <link rel="stylesheet" href="styles.style.css">
+        <link rel="stylesheet" href="css/signup.css">
+        <link rel="stylesheet" href="css/login.css">
+        <link rel="stylesheet" href="css/posthandler.css">
       </head>
       <body>
         <header>

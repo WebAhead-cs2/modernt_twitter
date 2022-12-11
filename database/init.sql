@@ -16,12 +16,12 @@ CREATE TABLE blog_posts (
   text_content TEXT
 );
 
-INSERT INTO users (email, username , password, age, location) VALUES
-  ('Sery@1976','Sery1976', '28',28, 'Middlehill),
-  ('Notne@1991', 'Notne1991', '36', 36, 'Sunipol),
-  ('Moull@1990', 'Moull1990', '41',41, 'Wanlip),
-  ('Spont@1935','Spont1935', '72', 72, 'Saxilby),
-  ('Pre#cand', 'Precand', '19' ,19, 'Stanton)
+INSERT INTO users (email, username , password, age) VALUES
+  ('Sery@1976','Sery1976', '28',28),
+  ('Notne@1991', 'Notne1991', '36', 36),
+  ('Moull@1990', 'Moull1990', '41',41),
+  ('Spont@1935','Spont1935', '72', 72),
+  ('Pre@cand', 'Precand', '19' ,19)
 ;
 
 INSERT INTO blog_posts (text_content, user_id) VALUES
