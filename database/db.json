@@ -9,6 +9,11 @@
       "email": "Hay@may",
       "password": "$2a$10$3AJp.jdwVM90BDmKUYmrVeDHJ5h7lCr03gbLMO6m1HVq3/vkYGoqW",
       "id": 1670401090621
+    },
+    {
+      "email": "1234@123",
+      "password": "$2a$10$1VgYRCfKxap1tgLX1pfr4.CCt5Xo4cfDh8X0tq2b27ZNV19Ao1v7W",
+      "id": 1670402760599
     }
   ]
 }

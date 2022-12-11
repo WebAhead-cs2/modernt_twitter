@@ -93,8 +93,12 @@ server.post("/log-in", (req, res) => {
     const email = req.body.email;
     console.log(email);
     res.cookie("email", email, { maxAge: 600000 });
-    logIn.post(req, res);
-    res.redirect("/");
+    logIn.post(req, res).then(html => res.send(html)).catch(error => {
+        res.send(home.layout(/*html */ `
+              <h1>${error} </h1> 
+            `));
+    });
+   
 });
 
 server.get("/log-out", (req, res) => {

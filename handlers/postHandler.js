@@ -1,4 +1,5 @@
 const home = require("./home");
+const db = require("../database/connection");
 
 let posts = [
     { author: "Amal@halahala", title: "Arhebo", content: "halahalahala fekom arhebooo" },
